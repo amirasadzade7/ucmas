@@ -6,33 +6,15 @@ import java.util.Random;
 
 public class TestAI {
 
-    private int[] numbers = {3, 4, 5, 5, 6, 8, 8, 8};
-    private int[] minusnums = {1, 1, 2, 2, 2, 2, 3, 3};
-    private int[] dnums = {0, 0, 1, 1, 1, 1, 1, 1};
-
-    public List<Integer> Elementary() {
-        List<Integer> list = new ArrayList<>();
-        for (int x = 0; x < 8; x++) {
-            for (int i = 0; i < 25; i++) {
-
-                int sum = 0;
-                int minus = minusnums[x];
-
-                for (int j = 0; j < numbers[x]; j++) {
-                    do {
-
-                        int rnd = getRandom(1, dnums[x]);
-                        sum += rnd;
-                        if (sum > 0)
-                            list.add(rnd);
-                        else
-                            sum -= rnd;
-                    } while (sum < 0);
-                }
-            }
-        }
-        return list;
-    }
+    private int[][] Ele1 = {{1,2,8},{1,2,8},{4,8,-2},{8,4,1},{8,-6,9},{2,6,1},{6,-5,6},{3,2,9},{8,4,-3},{8,1,9},{7,-5,3},{1,7,3},{1,2,-1},{9,4,6},{2,9,-7},{2,1,4}};
+    private int[][] Ele2 = {};
+    private int[][] Ele3 = {};
+    private int[][] Ele4 = {};
+    private int[][] Ele5 = {};
+    private int[][] Ele6 = {};
+    private int[][] Ele7 = {};
+    private int[][] Ele8 = {};
+    
 
 
     private static int getRandom(int min, int max) {
